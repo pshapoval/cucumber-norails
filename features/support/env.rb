@@ -1,7 +1,8 @@
 begin require 'rspec/expectations'; rescue LoadError; require 'spec/expectations'; end
 require 'capybara' 
-require 'capybara/dsl' 
+require 'capybara/dsl'
 require 'capybara/cucumber'
-Capybara.default_driver = :selenium
+require 'capybara-webkit'
+Capybara.default_driver = :webkit #:selenium
 Capybara.app_host = 'http://www.google.com' 
 World(Capybara) 
